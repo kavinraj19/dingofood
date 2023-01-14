@@ -179,7 +179,7 @@ body {
 .container {
     display: block;
     position: relative;
-    padding-left: 35px;
+   
     margin-bottom: 12px;
     cursor: pointer;
     font-size: 22px;
@@ -191,7 +191,7 @@ body {
 
 /* Hide the browser's default radio button */
 .container input {
-    position: absolute;
+    position: relative;
     opacity: 0;
     cursor: pointer;
 }
@@ -366,15 +366,15 @@ ul {
     <label class="container">Cake
         <input type="radio" id="menu_category" name="menu_category" <?=$row['menu_category']=="Cake" ? "checked" : ""?> value="Cake">
        
-        <span style="left: 12%" class="checkmark"></span>
+        <span style="left: 55px" class="checkmark"></span>
     </label>
     <label class="container">Beverage
         <input type="radio" id="menu_category" name="menu_category" <?=$row['menu_category']=="Beverage" ? "checked" : ""?> value="Beverage">
-        <span style="left:40%" class="checkmark"></span>
+        <span style="left: 125px" class="checkmark"></span>
     </label>
     <label class="container">Mini Bites
         <input type="radio" id="menu_category" name="menu_category" <?=$row['menu_category']=="Mini Bites" ? "checked" : ""?> value="Mini Bites">
-        <span style="left:69%" class="checkmark"></span>
+        <span style="left: 205px" class="checkmark"></span>
     </label>
     </div><br/>
 
@@ -385,11 +385,11 @@ ul {
     <div style="display:flex; border: 1px solid lightgrey; padding: 13px; border-radius: 4px; font-size: 15px;">
     <label class="container">Available
         <input type="radio" id="menu_status" name="menu_status" <?=$row['menu_status']=="Available" ? "checked" : ""?> value="Available">
-        <span style="left: 18%" class="checkmark"></span>
+        <span style="left: 55px" class="checkmark"></span>
     </label>
     <label class="container">Not available
         <input type="radio" id="menu_status" name="menu_status" <?=$row['menu_status']=="Not available" ? "checked" : ""?> value="Not available">
-        <span style="left:59%" class="checkmark"></span>
+        <span style="left:155px" class="checkmark"></span>
     </label>
     </div><br/>
 
