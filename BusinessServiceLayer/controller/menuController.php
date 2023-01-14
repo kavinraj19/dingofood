@@ -13,7 +13,7 @@ class menuController{
         $menu->menu_description = $_POST['menu_description'];
         $menu->menu_status = $_POST['menu_status'];
         $menu->menu_image = $_POST['menu_image'];
-        $menu->cost = $_POST['cost'];
+       
         if($menu->addMenu() > 0){
             $message = "Menu Successfully Added!";
         echo "<script type='text/javascript'>alert('$message');
@@ -44,7 +44,7 @@ class menuController{
         $menu->menu_description = $_POST['menu_description'];
         $menu->menu_status = $_POST['menu_status'];
         $menu->menu_image = $_POST['menu_image'];
-        $menu->cost = $_POST['cost'];
+      
         if($menu->editMenu()){
             $message = "Success Update!";
         echo "<script type='text/javascript'>alert('$message');
