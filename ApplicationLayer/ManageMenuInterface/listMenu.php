@@ -342,7 +342,7 @@ $sno = $row + 1;
         <th class="solid"><a>No</a></th>
         <th class="solid"><a>Name</a></th>
         <th class="solid"><a>Price</a></th>
-        <th class="solid"><a>Cost</a></th>
+     
         <th class="solid"><a>Category</a></th>
         <th class="solid"><a>Description</a></th>
         <th class="solid"><a>Status</a></th>
@@ -358,7 +358,7 @@ $sno = $row + 1;
         <td class="solid"><?php echo $sno; ?></td>
         <td class="solid"><?php echo $row['menu_name']; ?></td>
         <td class="solid">RM <?php echo $row['menu_price']; ?></td>
-        <td class="solid">RM <?php echo $row['cost']; ?></td>
+       
         <td class="solid"><?php echo $row['menu_category']; ?></td>
         <td class="solid"><?php echo $row['menu_description']; ?></td>
         <td class="solid"><?php echo $row['menu_status']; ?></td>
