@@ -190,8 +190,8 @@ body {
 /* The container */
 .container {
     display: block;
-  
-    padding-left: 35px;
+    position: relative;
+   
     margin-bottom: 12px;
     cursor: pointer;
     font-size: 22px;
@@ -201,6 +201,54 @@ body {
     user-select: none;
 }
 
+/* Hide the browser's default radio button */
+.container input {
+    position: relative;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    left: 26%;
+    height: 25px;
+    width: 25px;
+    background-color: grey;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+    top: 9px;
+    left: 9px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
 /* Hide the browser's default radio button */
 
 
@@ -320,15 +368,15 @@ ul {
     <div style="display:flex; border: 1px solid lightgrey; padding: 13px; border-radius: 4px; font-size: 15px;">
     <label class="container">Cake 
         <input type="radio" id="menu_category" name="menu_category" value="Cake" required>
-        <span  class="checkmark"></span>
+        <span style="left: 55px" class="checkmark"></span>
     </label>
     <label class="container">Beverage
         <input type="radio" id="menu_category" name="menu_category" value="Beverage">
-        <span  class="checkmark"></span>
+        <span style="left: 125px" class="checkmark"></span>
     </label>
     <label class="container">Mini Bites
         <input type="radio" id="menu_category" name="menu_category" value="Mini Bites">
-        <span  class="checkmark"></span>
+        <span style="left: 205px" class="checkmark"></span>
     </label>
     </div><br/>
 
@@ -339,11 +387,11 @@ ul {
     <div style="display:flex; border: 1px solid lightgrey; padding: 13px; border-radius: 4px; font-size: 15px;">
     <label class="container">Available
         <input type="radio" id="menu_status" name="menu_status" value="Available" required>
-        <span style="left: 18%" class="checkmark"></span>
+        <span style="left: 55px" class="checkmark"></span>
     </label>
     <label class="container">Not available
         <input type="radio" id="menu_status" name="menu_status" value="Not available">
-        <span style="left:59%" class="checkmark"></span>
+        <span style="left: 155px" class="checkmark"></span>
     </label>
     </div><br/>
 
