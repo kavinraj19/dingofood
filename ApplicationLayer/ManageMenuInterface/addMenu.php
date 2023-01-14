@@ -361,8 +361,7 @@ ul {
 <p style="font-size: 16px; color: black; text-align: left"> Price <label style="font-size: 16px; color: red;"> * </label></p>
 <input type="float" id="menu_price" name="menu_price" required><br/>
 
-<p style="font-size: 16px; color: black; text-align: left"> Cost <label style="font-size: 16px; color: red;"> * </label></p>
-<input type="float" id="cost" name="cost" required><br/>
+
 
 <p style="font-size: 16px; color: black; text-align: left"> Category <label style="font-size: 16px; color: red;"> * </label></p>
     <div style="display:flex; border: 1px solid lightgrey; padding: 13px; border-radius: 4px; font-size: 15px;">
