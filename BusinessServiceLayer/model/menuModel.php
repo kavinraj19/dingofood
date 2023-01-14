@@ -4,13 +4,13 @@ require_once 'C:/xampp/htdocs/Project/libs/database.php';
 class menuModel{
     
     // To store and retrieve all the information of menu data.
-    public $menu_id,$menu_name,$menu_price,$menu_category,$menu_description,$menu_status, $menu_image, $cost;
+    public $menu_id,$menu_name,$menu_price,$menu_category,$menu_description,$menu_status, $menu_image;
     
     function addMenu(){
         //To insert menu details into menu table.
-        $sql = "INSERT INTO menu (menu_name, menu_price, menu_category, menu_description, menu_status, menu_image, cost) VALUES (:menu_name, :menu_price, :menu_category, :menu_description, :menu_status, :menu_image, :cost)";
+        $sql = "INSERT INTO menu (menu_name, menu_price, menu_category, menu_description, menu_status, menu_image) VALUES (:menu_name, :menu_price, :menu_category, :menu_description, :menu_status, :menu_image)";
 
-        $args = [':menu_name'=>$this->menu_name, ':menu_price'=>$this->menu_price, ':menu_category'=>$this->menu_category, ':menu_description'=>$this->menu_description, ':menu_status'=>$this->menu_status, ':menu_image'=>$this->menu_image, ':cost'=>$this->cost];
+        $args = [':menu_name'=>$this->menu_name, ':menu_price'=>$this->menu_price, ':menu_category'=>$this->menu_category, ':menu_description'=>$this->menu_description, ':menu_status'=>$this->menu_status, ':menu_image'=>$this->menu_image];
 
         $stmt = DB::run($sql, $args);
         $count = $stmt->rowCount();
@@ -32,9 +32,9 @@ class menuModel{
 
     function editMenu(){
         //To update the details of a specific menu in the menu table.
-        $sql = "UPDATE menu SET menu_name=:menu_name,menu_price=:menu_price,menu_category=:menu_category,menu_description=:menu_description,menu_status=:menu_status,menu_image=:menu_image, cost=:cost WHERE menu_id=:menu_id";
+        $sql = "UPDATE menu SET menu_name=:menu_name,menu_price=:menu_price,menu_category=:menu_category,menu_description=:menu_description,menu_status=:menu_status,menu_image=:menu_image WHERE menu_id=:menu_id";
 
-        $args = [':menu_id'=>$this->menu_id, ':menu_name'=>$this->menu_name, ':menu_price'=>$this->menu_price,':menu_category'=>$this->menu_category, ':menu_description'=>$this->menu_description, ':menu_status'=>$this->menu_status, ':menu_image'=>$this->menu_image, ':cost'=>$this->cost];
+        $args = [':menu_id'=>$this->menu_id, ':menu_name'=>$this->menu_name, ':menu_price'=>$this->menu_price,':menu_category'=>$this->menu_category, ':menu_description'=>$this->menu_description, ':menu_status'=>$this->menu_status, ':menu_image'=>$this->menu_image];
         return DB::run($sql,$args);
     }
 
