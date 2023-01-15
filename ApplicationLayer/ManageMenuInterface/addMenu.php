@@ -12,9 +12,9 @@ if($conn){
      die($conn);
 }
  
-require_once 'C:/xampp/htdocs/Project/libs/database.php';
-require_once 'C:/xampp/htdocs/Project/libs/adminSession.php';
-require_once 'C:/xampp/htdocs/Project/BusinessServiceLayer/controller/menuController.php';
+require_once 'C:/xampp/htdocs/dingofood/libs/database.php';
+require_once 'C:/xampp/htdocs/dingofood/libs/adminSession.php';
+require_once 'C:/xampp/htdocs/dingofood/BusinessServiceLayer/controller/menuController.php';
  
 $admin_username = $_SESSION['admin_username'];
 
@@ -52,7 +52,7 @@ if(isset($_POST['add'])){
                 rel="stylesheet"  type='text/css'>
         </link>
             <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="/Project/css/home.css">
+        <link rel="stylesheet" href="/dingofood/css/home.css">
 
 <!-- STYLE -->
   
@@ -260,7 +260,7 @@ body, html {
 }
 
 .hero-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("/Project/img/dingoLogo3.jfif");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("/dingofood/img/dingoLogo3.jfif");
   height: 50%;
   background-position: center;
   background-repeat: no-repeat;
@@ -333,12 +333,12 @@ ul {
 <div id="menu-nav">
   <div style="list-style-type: none;" id="navigation-bar">
     <ul>
-      <li><a href="/Project/ApplicationLayer/ManageUserInterface/adminHome.php"><i class="fa fa-home"></i><span>Home</span></a></li>
-      <li><a href="/Project/ApplicationLayer/ManageMenuInterface/listMenu.php"><i class="fa fa-list"></i><span>List</span></a></li>
-      <li><a href="/Project/ApplicationLayer/ManageMenuInterface/addMenu.php"><i class="fa fa-plus"></i><span>New Menu</span></a></li>
-      <li><a href="/Project/ApplicationLayer/ManageReportInterface/viewMenu.php"><i class="fa fa-bar-chart"></i><span>Report</span></a></li>
+      <li><a href="/dingofood/ApplicationLayer/ManageUserInterface/adminHome.php"><i class="fa fa-home"></i><span>Home</span></a></li>
+      <li><a href="/dingofood/ApplicationLayer/ManageMenuInterface/listMenu.php"><i class="fa fa-list"></i><span>List</span></a></li>
+      <li><a href="/dingofood/ApplicationLayer/ManageMenuInterface/addMenu.php"><i class="fa fa-plus"></i><span>New Menu</span></a></li>
+      <li><a href="/dingofood/ApplicationLayer/ManageReportInterface/viewMenu.php"><i class="fa fa-bar-chart"></i><span>Report</span></a></li>
       <li><a href="logout.php" onclick="return confirm('Are you sure you want to sign out?')"><i class="fa fa-sign-out"></i><span>Sign Out</span></a></li>
-      <a href="Project/ApplicationLayer/ManageUserInterface/adminProfile.php" id="topnav-right"><i class="fa fa-user"></i><span>Hello  <?php echo $admin_username; ?></span></a>
+      <a href="dingofood/ApplicationLayer/ManageUserInterface/adminProfile.php" id="topnav-right"><i class="fa fa-user"></i><span>Hello  <?php echo $admin_username; ?></span></a>
     </ul>
 
   </div>
@@ -362,20 +362,19 @@ ul {
 <input type="float" id="menu_price" name="menu_price" required><br/>
 
 
-
 <p style="font-size: 16px; color: black; text-align: left"> Category <label style="font-size: 16px; color: red;"> * </label></p>
     <div style="display:flex; border: 1px solid lightgrey; padding: 13px; border-radius: 4px; font-size: 15px;">
     <label class="container">Cake 
         <input type="radio" id="menu_category" name="menu_category" value="Cake" required>
-        <span style="left: 55px" class="checkmark"></span>
+        <span style="left: 19%" class="checkmark"></span>
     </label>
     <label class="container">Beverage
         <input type="radio" id="menu_category" name="menu_category" value="Beverage">
-        <span style="left: 125px" class="checkmark"></span>
+        <span style="left:47%" class="checkmark"></span>
     </label>
     <label class="container">Mini Bites
         <input type="radio" id="menu_category" name="menu_category" value="Mini Bites">
-        <span style="left: 205px" class="checkmark"></span>
+        <span style="left:77%" class="checkmark"></span>
     </label>
     </div><br/>
 
@@ -386,11 +385,11 @@ ul {
     <div style="display:flex; border: 1px solid lightgrey; padding: 13px; border-radius: 4px; font-size: 15px;">
     <label class="container">Available
         <input type="radio" id="menu_status" name="menu_status" value="Available" required>
-        <span style="left: 55px" class="checkmark"></span>
+        <span style="left: 25%" class="checkmark"></span>
     </label>
     <label class="container">Not available
         <input type="radio" id="menu_status" name="menu_status" value="Not available">
-        <span style="left: 155px" class="checkmark"></span>
+        <span style="left:70%" class="checkmark"></span>
     </label>
     </div><br/>
 
