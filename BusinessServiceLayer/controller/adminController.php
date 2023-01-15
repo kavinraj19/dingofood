@@ -21,7 +21,7 @@ function loginAdmin(){
                 //$_SESSION['admin_password'] = $value[2];
             
                 echo "<script type='text/javascript'>alert('$message');
-                window.location = '/Project/ApplicationLayer/ManageAdminInterface/adminHome.php';
+                window.location = '/dingofood/ApplicationLayer/ManageAdminInterface/adminHome.php';
                 </script>";
                 exit();
 		}
@@ -29,7 +29,7 @@ function loginAdmin(){
 			$message = "Login Failed ! Username or password incorrect";
                
             echo "<script type='text/javascript'>alert('$message');
-            window.location = '/Project/ApplicationLayer/ManageAdminInterface/adminLogin.php';
+            window.location = '/dingofood/ApplicationLayer/ManageAdminInterface/adminLogin.php';
             </script>";
             exit();
 		}
