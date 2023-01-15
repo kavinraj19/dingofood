@@ -59,22 +59,7 @@ class orderController{
             }
         }
 
-        //Search function
-
-        if(isset($_POST['search']))
-        {
-          $valueToSearch = $_POST['valueToSearch'];
-          // search in all table columns
-          // using concat mysql function
-          $query = "SELECT * FROM `orders` WHERE CONCAT(`order_id`, `customer_id`, `order_detail`, `order_quantity`, `order_price`, `order_img`, `order_time`) LIKE '%".$valueToSearch."%'";
-          $search_result = filterTable($query);
-    
-         }
-         else {
-         $query = "SELECT * FROM `orders`";
-         $search_result = filterTable($query);
-         }
-
+        
         //To Update order from Orders table using order id where order_id=order_id - NUREEN
         function updateOrder(){
         // To get and set quantity from cartModel class.
