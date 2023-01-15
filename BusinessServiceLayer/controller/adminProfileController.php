@@ -108,7 +108,7 @@ public function edit()
           
           $_SESSION['admin_username'] = $data['admin_username'];
           $_SESSION['admin_password'] = $data['admin_password'];
-          header("location:/Project/ApplicationLayer/ManageAdminInterface/adminProfile.php");
+          header("location:/dingofood/ApplicationLayer/ManageAdminInterface/adminProfile.php");
         } else {
           die('Something went wrong');
         }
